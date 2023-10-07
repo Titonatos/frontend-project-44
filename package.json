@@ -1,5 +1,15 @@
 {
-  "dependencies": {
-    "makefile": "^0.0.2"
-  }
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/Titonatos/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Titonatos/frontend-project-44/actions)",
+  "main": "index.js",
+  "bin": {
+    "code": "bin/brain-games.js",
+    "brain-games": "bin/brain-games.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
