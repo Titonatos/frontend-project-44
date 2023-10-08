@@ -28,6 +28,7 @@ export const startEvenGame = (playerName) => {
       correctAnswerCount += 1;
       console.log('Correct!');
     } else {
+      correctAnswerCount = 0;
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
     }
   }
