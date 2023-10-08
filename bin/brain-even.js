@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { greeting, startEvenGame } from '../src/even-game.js';
+import startEvenGame from '../src/games/even-game.js';
 
-const playerName = greeting();
-startEvenGame(playerName);
+startEvenGame();
