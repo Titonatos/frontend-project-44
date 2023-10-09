@@ -7,3 +7,5 @@ Calc game
 <a href="https://asciinema.org/a/sEVx60TP1dNH4edzWoh6VNL7q" target="_blank"><img src="https://asciinema.org/a/sEVx60TP1dNH4edzWoh6VNL7q.svg" /></a>
 GCD game
 <a href="https://asciinema.org/a/iUVShfZtYAbkEZd8xUuSmk8Lb" target="_blank"><img src="https://asciinema.org/a/iUVShfZtYAbkEZd8xUuSmk8Lb.svg" /></a>
+Progression game
+<a href="https://asciinema.org/a/RuXtxRyGCOrtAQQcDkRSBITY3" target="_blank"><img src="https://asciinema.org/a/RuXtxRyGCOrtAQQcDkRSBITY3.svg" /></a>

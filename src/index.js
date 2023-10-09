@@ -9,7 +9,7 @@ export const greeting = () => {
   return name;
 };
 
-export const getRandomInt = (max) => Math.floor(Math.random() * max);
+export const getRandomInt = (max, min = 0) => Math.floor(Math.random() * max + min);
 
 export const getNaturalRandomInt = (max) => Math.floor(Math.random() * max + 1);
 
