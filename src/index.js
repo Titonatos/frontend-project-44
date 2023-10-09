@@ -11,6 +11,8 @@ export const greeting = () => {
 
 export const getRandomInt = (max) => Math.floor(Math.random() * max);
 
+export const getNaturalRandomInt = (max) => Math.floor(Math.random() * max + 1);
+
 export const getAnswer = () => readlineSync.question('Your answer: ');
 
 export const getMaxNumberOfRounds = () => 3;
