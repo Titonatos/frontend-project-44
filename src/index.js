@@ -32,3 +32,7 @@ export const isAnswerCorrect = (answer, correctAnswer) => {
 export const congratulate = (playerName) => {
   console.log(`Congratulations, ${playerName}!`);
 };
+
+export const parting = (playerName) => {
+  console.log(`Let's try again, ${playerName}!`);
+};
