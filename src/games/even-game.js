@@ -6,9 +6,8 @@ export default () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   const maxNumber = 30;
-  let correctAnswerCount = 0;
 
-  while (correctAnswerCount < 3) {
+  for (let i = 0; i < util.getMaxNumberOfRounds(); i += 1) {
     const randomedNumber = util.getRandomInt(maxNumber);
     const correctAnswer = randomedNumber % 2 ? 'no' : 'yes';
 
@@ -16,10 +15,9 @@ export default () => {
 
     const answer = util.getAnswer();
 
-    if (util.isAnswerCorrect(answer, correctAnswer)) {
-      correctAnswerCount += 1;
-    } else {
-      correctAnswerCount = 0;
+    if (util.isAnswerCorrect(answer, correctAnswer) === false) {
+      console.log(`Let's try again, ${playerName}!`);
+      return;
     }
   }
 
