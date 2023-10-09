@@ -1,6 +1,6 @@
 import * as util from '../index.js';
 
-function gcd(num1, num2) {
+const gcd = (num1, num2) => {
   if ((typeof num1 !== 'number') || (typeof num2 !== 'number')) {
     return false;
   }
@@ -13,17 +13,17 @@ function gcd(num1, num2) {
     x = t;
   }
   return x;
-}
+};
 
 export default () => {
   const playerName = util.greeting();
-  const maxRandomNumber = 10;
+  const maxRandomNumber = 30;
 
   console.log('Find the greatest common divisor of given numbers.');
 
   for (let i = 0; i < util.getMaxNumberOfRounds(); i += 1) {
-    const operand1 = util.getRandomInt(maxRandomNumber);
-    const operand2 = util.getRandomInt(maxRandomNumber);
+    const operand1 = util.getNaturalRandomInt(maxRandomNumber);
+    const operand2 = util.getNaturalRandomInt(maxRandomNumber);
 
     util.ask(`${operand1} ${operand2}`);
 
