@@ -3,14 +3,11 @@ import * as util from '../index.js';
 export default () => {
   const playerName = util.greeting();
   const operators = ['+', '-', '*'];
-  const correctAnswersToWin = 3;
   const maxNumber = 10;
 
   console.log('What is the result of the expression?');
 
-  let correctAnswerCount = 0;
-
-  while (correctAnswerCount < correctAnswersToWin) {
+  for (let i = 0; i < util.getMaxNumberOfRounds(); i += 1) {
     const operand1 = util.getRandomInt(maxNumber);
     const operand2 = util.getRandomInt(maxNumber);
     const operator = operators[util.getRandomInt(operators.length)];
@@ -41,13 +38,9 @@ export default () => {
 
     if (util.isAnswerCorrect(answer, correctAnswer.toString()) === false) {
       console.log(`Let's try again, ${playerName}!`);
-      break;
+      return;
     }
-
-    correctAnswerCount += 1;
   }
 
-  if (correctAnswerCount === 3) {
-    util.congratulate(playerName);
-  }
+  util.congratulate(playerName);
 };

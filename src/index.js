@@ -13,6 +13,8 @@ export const getRandomInt = (max) => Math.floor(Math.random() * max);
 
 export const getAnswer = () => readlineSync.question('Your answer: ');
 
+export const getMaxNumberOfRounds = () => 3;
+
 export const ask = (expression) => {
   console.log(`Question: ${expression}`);
 };
