@@ -9,3 +9,5 @@ GCD game
 <a href="https://asciinema.org/a/iUVShfZtYAbkEZd8xUuSmk8Lb" target="_blank"><img src="https://asciinema.org/a/iUVShfZtYAbkEZd8xUuSmk8Lb.svg" /></a>
 Progression game
 <a href="https://asciinema.org/a/RuXtxRyGCOrtAQQcDkRSBITY3" target="_blank"><img src="https://asciinema.org/a/RuXtxRyGCOrtAQQcDkRSBITY3.svg" /></a>
+Prime game
+<a href="https://asciinema.org/a/d0SvvTSurhoXzq2nHOSARFkn5" target="_blank"><img src="https://asciinema.org/a/d0SvvTSurhoXzq2nHOSARFkn5.svg" /></a>
