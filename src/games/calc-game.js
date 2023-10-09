@@ -7,7 +7,7 @@ export default () => {
 
   console.log('What is the result of the expression?');
 
-  for (let i = 0; i < util.getmaxRandomNumberOfRounds(); i += 1) {
+  for (let i = 0; i < util.getMaxNumberOfRounds(); i += 1) {
     const operand1 = util.getRandomInt(maxRandomNumber);
     const operand2 = util.getRandomInt(maxRandomNumber);
     const operator = operators[util.getRandomInt(operators.length)];
