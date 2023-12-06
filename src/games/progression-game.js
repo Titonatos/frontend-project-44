@@ -1,9 +1,11 @@
 import * as util from '../index.js';
 
+const description = 'What number is missing in the progression?';
+
 const getRandomSequenceOfNumbers = (sequenceLength) => {
   const maxRandomNumber = 10;
-  const startNumber = util.getNaturalRandomInt(maxRandomNumber);
-  const stepSize = util.getNaturalRandomInt(maxRandomNumber);
+  const startNumber = util.getRandomInt(maxRandomNumber);
+  const stepSize = util.getRandomInt(maxRandomNumber);
 
   const sequence = [startNumber];
 
@@ -14,29 +16,22 @@ const getRandomSequenceOfNumbers = (sequenceLength) => {
   return sequence;
 };
 
-export default () => {
-  const playerName = util.greeting();
+const generateRound = () => {
   const maxRandomNumber = 10;
   const minSequenceLength = 5;
 
-  console.log('What number is missing in the progression?');
+  const sequence = getRandomSequenceOfNumbers(maxRandomNumber, minSequenceLength);
 
-  for (let i = 0; i < util.getMaxNumberOfRounds(); i += 1) {
-    const sequence = getRandomSequenceOfNumbers(maxRandomNumber, minSequenceLength);
+  const randomIndex = util.getRandomInt(sequence.length);
 
-    const randomIndex = util.getRandomInt(sequence.length);
-    const correctAnswer = sequence[randomIndex];
-    sequence[randomIndex] = '..';
+  const answer = sequence[randomIndex];
+  sequence[randomIndex] = '..';
 
-    util.ask(sequence.toString().replaceAll(',', ' '));
+  const question = sequence.toString().replaceAll(',', ' ');
 
-    const answer = util.getAnswer();
+  return [question, answer];
+};
 
-    if (util.isAnswerCorrect(answer, correctAnswer.toString()) === false) {
-      util.parting(playerName);
-      return;
-    }
-  }
-
-  util.congratulate(playerName);
+export default () => {
+  util.startGame(description, generateRound);
 };

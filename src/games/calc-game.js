@@ -1,46 +1,36 @@
 import * as util from '../index.js';
 
-export default () => {
-  const playerName = util.greeting();
+const description = 'What is the result of the expression?';
+
+const calculate = (num1, num2, operator) => {
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    default:
+      console.log(`Error: non-existent operator '${operator}'!`);
+      return null;
+  }
+};
+
+const generateRound = () => {
   const operators = ['+', '-', '*'];
   const maxRandomNumber = 10;
 
-  console.log('What is the result of the expression?');
+  const operator = operators[util.getRandomInt(operators.length)];
 
-  for (let i = 0; i < util.getMaxNumberOfRounds(); i += 1) {
-    const operand1 = util.getRandomInt(maxRandomNumber);
-    const operand2 = util.getRandomInt(maxRandomNumber);
-    const operator = operators[util.getRandomInt(operators.length)];
+  const operand1 = util.getRandomInt(maxRandomNumber);
+  const operand2 = util.getRandomInt(maxRandomNumber);
 
-    util.ask(`${operand1} ${operator} ${operand2}`);
+  const question = `${operand1} ${operator} ${operand2}`;
+  const answer = calculate(operand1, operand2, operator);
 
-    const answer = util.getAnswer();
-    let correctAnswer;
+  return [question, answer];
+};
 
-    switch (operator) {
-      case operators[0]:
-        correctAnswer = operand1 + operand2;
-        break;
-
-      case operators[1]:
-        correctAnswer = operand1 - operand2;
-        break;
-
-      case operators[2]:
-        correctAnswer = operand1 * operand2;
-        break;
-
-      default:
-        correctAnswer = undefined;
-        console.log('Some error');
-        return;
-    }
-
-    if (util.isAnswerCorrect(answer, correctAnswer.toString()) === false) {
-      util.parting(playerName);
-      return;
-    }
-  }
-
-  util.congratulate(playerName);
+export default () => {
+  util.startGame(description, generateRound);
 };

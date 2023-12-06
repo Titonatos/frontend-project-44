@@ -2,10 +2,9 @@
   "name": "@hexlet/code",
   "type": "module",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/Titonatos/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Titonatos/frontend-project-44/actions)",
+  "description": "Hexlet Project #1",
   "main": "index.js",
   "bin": {
-    "code": "bin/brain-games.js",
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
     "brain-gcd": "bin/brain-gcd.js",

@@ -1,3 +1,5 @@
+# Проект "Игры разума"
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Titonatos/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Titonatos/frontend-project-44/actions)
 <a href="https://codeclimate.com/github/Titonatos/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/ddf5e017a77a5efb6a1e/maintainability" /></a>
@@ -35,10 +37,10 @@ make install
     </tr>
     <tr>
         <td style="width: 50%;">
-            <a href="https://asciinema.org/a/IKHenf7oZAz2na6B4gvsnSO5H" target="_blank"><img src="https://asciinema.org/a/IKHenf7oZAz2na6B4gvsnSO5H.svg" /></a>
+            <a href="https://asciinema.org/a/GA3HF1rsxp6B1f5xjgIVc21u4" target="_blank"><img src="https://asciinema.org/a/GA3HF1rsxp6B1f5xjgIVc21u4.svg" /></a>
         </td>
         <td style="width: 50%;">
-            <a href="https://asciinema.org/a/sEVx60TP1dNH4edzWoh6VNL7q" target="_blank"><img src="https://asciinema.org/a/sEVx60TP1dNH4edzWoh6VNL7q.svg" /></a>
+            <a href="https://asciinema.org/a/utn6FYCUbtMQ6DBYSQrPLcCyw" target="_blank"><img src="https://asciinema.org/a/utn6FYCUbtMQ6DBYSQrPLcCyw.svg" /></a>
         </td>
     </tr>
     <tr>
@@ -47,10 +49,10 @@ make install
     </tr>
     <tr>
         <td>
-            <a href="https://asciinema.org/a/iUVShfZtYAbkEZd8xUuSmk8Lb" target="_blank"><img src="https://asciinema.org/a/iUVShfZtYAbkEZd8xUuSmk8Lb.svg" /></a>
+            <a href="https://asciinema.org/a/GoqogqvJsjasTEES7ptIvpzEo" target="_blank"><img src="https://asciinema.org/a/GoqogqvJsjasTEES7ptIvpzEo.svg" /></a>
         </td>
         <td>
-            <a href="https://asciinema.org/a/RuXtxRyGCOrtAQQcDkRSBITY3" target="_blank"><img src="https://asciinema.org/a/RuXtxRyGCOrtAQQcDkRSBITY3.svg" /></a>
+            <a href="https://asciinema.org/a/5zY8spNCfagoShjEypYSzpKIz" target="_blank"><img src="https://asciinema.org/a/5zY8spNCfagoShjEypYSzpKIz.svg" /></a>
         </td>
     </tr>
     <tr>
@@ -58,7 +60,7 @@ make install
     </tr>
     <tr>
         <td>
-            <a href="https://asciinema.org/a/d0SvvTSurhoXzq2nHOSARFkn5" target="_blank"><img src="https://asciinema.org/a/d0SvvTSurhoXzq2nHOSARFkn5.svg" /></a>
+            <a href="https://asciinema.org/a/OLAIz5P1pjA0rPANQ49IfB5jT" target="_blank"><img src="https://asciinema.org/a/OLAIz5P1pjA0rPANQ49IfB5jT.svg" /></a>
         </td>
     </tr>
 </table>

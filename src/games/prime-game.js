@@ -1,5 +1,7 @@
 import * as util from '../index.js';
 
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 const isPrime = (num) => {
   for (let i = 2; i < num; i += 1) {
     if (num % i === 0) return false;
@@ -7,26 +9,18 @@ const isPrime = (num) => {
   return num !== 1;
 };
 
-export default () => {
-  const playerName = util.greeting();
+const generateRound = () => {
   const maxNumber = 10;
   const minNumber = 3;
 
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+  const randomedNumber = util.getRandomInt(maxNumber, minNumber);
 
-  for (let i = 0; i < util.getMaxNumberOfRounds(); i += 1) {
-    const randomedNumber = util.getRandomInt(maxNumber, minNumber);
-    const correctAnswer = isPrime(randomedNumber) ? 'yes' : 'no';
+  const answer = isPrime(randomedNumber) ? 'yes' : 'no';
+  const question = randomedNumber;
 
-    util.ask(randomedNumber);
+  return [question, answer];
+};
 
-    const answer = util.getAnswer();
-
-    if (util.isAnswerCorrect(answer, correctAnswer) === false) {
-      util.parting(playerName);
-      return;
-    }
-  }
-
-  util.congratulate(playerName);
+export default () => {
+  util.startGame(description, generateRound);
 };
