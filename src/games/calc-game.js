@@ -11,8 +11,7 @@ const calculate = (num1, num2, operator) => {
     case '*':
       return num1 * num2;
     default:
-      console.log(`Error: non-existent operator '${operator}'!`);
-      return null;
+      throw new Error(`Unknown operator: '${operator}'`);
   }
 };
 
