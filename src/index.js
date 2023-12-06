@@ -21,7 +21,7 @@ export const startGame = (rules, startRound) => {
   for (let i = 1; i <= roundsCount; i += 1) {
     const [question, correctAnswer] = startRound();
 
-    console.log(question);
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer !== (correctAnswer).toString()) {
