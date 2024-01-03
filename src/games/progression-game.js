@@ -1,11 +1,11 @@
-import * as util from '../index.js';
+import getRandomInt from '../utils.js';
+import { startGame } from '../index.js';
 
 const description = 'What number is missing in the progression?';
 
-const getRandomSequenceOfNumbers = (sequenceLength) => {
+const getProgression = (startNumber, sequenceLength) => {
   const maxRandomNumber = 10;
-  const startNumber = util.getRandomInt(maxRandomNumber);
-  const stepSize = util.getRandomInt(maxRandomNumber);
+  const stepSize = getRandomInt(0, maxRandomNumber);
 
   const sequence = [startNumber];
 
@@ -17,12 +17,12 @@ const getRandomSequenceOfNumbers = (sequenceLength) => {
 };
 
 const generateRound = () => {
-  const maxRandomNumber = 10;
-  const minSequenceLength = 5;
+  const startNumber = 10;
+  const sequenceLength = 5;
 
-  const sequence = getRandomSequenceOfNumbers(maxRandomNumber, minSequenceLength);
+  const sequence = getProgression(startNumber, sequenceLength);
 
-  const randomIndex = util.getRandomInt(sequence.length);
+  const randomIndex = getRandomInt(0, sequence.length);
 
   const answer = sequence[randomIndex];
   sequence[randomIndex] = '..';
@@ -33,5 +33,5 @@ const generateRound = () => {
 };
 
 export default () => {
-  util.startGame(description, generateRound);
+  startGame(description, generateRound);
 };

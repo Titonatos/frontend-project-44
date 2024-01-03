@@ -1,4 +1,5 @@
-import * as util from '../index.js';
+import getRandomInt from '../utils.js';
+import { startGame } from '../index.js';
 
 const description = 'What is the result of the expression?';
 
@@ -19,10 +20,10 @@ const generateRound = () => {
   const operators = ['+', '-', '*'];
   const maxRandomNumber = 10;
 
-  const operator = operators[util.getRandomInt(operators.length)];
+  const operator = operators[getRandomInt(0, operators.length)];
 
-  const operand1 = util.getRandomInt(maxRandomNumber);
-  const operand2 = util.getRandomInt(maxRandomNumber);
+  const operand1 = getRandomInt(0, maxRandomNumber);
+  const operand2 = getRandomInt(0, maxRandomNumber);
 
   const question = `${operand1} ${operator} ${operand2}`;
   const answer = calculate(operand1, operand2, operator);
@@ -31,5 +32,5 @@ const generateRound = () => {
 };
 
 export default () => {
-  util.startGame(description, generateRound);
+  startGame(description, generateRound);
 };
